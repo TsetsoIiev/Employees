@@ -18,7 +18,7 @@ namespace Employees.Web.Services
 
         public bool AreOverlappingTimes(TimePeriodForProject project1, TimePeriodForProject project2)
         {
-            return project1.DateFrom < project2.DateTo && project2.DateFrom < project1.DateTo;
+            return project1.DateFrom <= project2.DateTo && project2.DateFrom <= project1.DateTo;
         }
 
         public int GetDaysWorkedTogether(TimePeriodForProject project1, TimePeriodForProject project2)
