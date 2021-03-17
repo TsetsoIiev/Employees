@@ -50,7 +50,7 @@ namespace Employees.Web.Services
                 }
             }
 
-            //We assume that there is only one pair of coworkers
+            //We assume that there is only one pair of coworkers with highest time worked together
             return coworkers.MaxBy(x => x.TotalDaysWorked).FirstOrDefault();
         }
     }
