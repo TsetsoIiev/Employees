@@ -25,13 +25,7 @@ namespace Employees.Web.Services
 
                 foreach (var otherEmployeeId in otherEmployees)
                 {
-                    var coworkerPair = new Coworkers()
-                    {
-                        FirstEmployeeId = employeeId,
-                        SecondEmployeeId = otherEmployeeId,
-                        TotalDaysWorked = 0,
-                        ProjectIdsWorkedOn = new HashSet<int>()
-                    };
+                    var coworkerPair = new Coworkers(employeeId, otherEmployeeId);
                     
                     foreach (var currentProject in timePeriods)
                     {
