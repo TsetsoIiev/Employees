@@ -28,7 +28,7 @@ namespace Employees.Web
 
             services.AddTransient<IDateTimeParser, DateTimeParser>();
             services.AddTransient<IEmployeeDataParser, EmployeeDataParser>();
-            services.AddTransient<IEmployeeService, Service>();
+            services.AddTransient<IEmployeeService, EmployeeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

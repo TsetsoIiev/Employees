@@ -6,11 +6,11 @@ using MoreLinq;
 
 namespace Employees.Web.Services
 {
-    public class Service : IEmployeeService
+    public class EmployeeService : IEmployeeService
     {
         private readonly IDateTimeParser _dateTimeParser;
 
-        public Service(IDateTimeParser dateTimeParser)
+        public EmployeeService(IDateTimeParser dateTimeParser)
         {
             _dateTimeParser = dateTimeParser;
         }
@@ -47,6 +47,7 @@ namespace Employees.Web.Services
                             coworkerPair.TotalDaysWorked += timeWorkedTogether;
                             coworkerPair.ProjectIdsWorkedOn.Add(currentProject.ProjectId);
 
+                            //We assume that there is only one pair of coworkers per project
                             break;
                         }
                     }
