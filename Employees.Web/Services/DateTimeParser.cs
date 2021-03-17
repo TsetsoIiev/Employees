@@ -16,21 +16,21 @@ namespace Employees.Web.Services
                     : new DateTime();
         }
 
-        public bool AreOverlappingTimes(Employee employee1, Employee employee2)
+        public bool AreOverlappingTimes(TimePeriodForProject project1, TimePeriodForProject project2)
         {
-            return employee1.DateFrom < employee2.DateTo && employee2.DateFrom < employee1.DateTo;
+            return project1.DateFrom < project2.DateTo && project2.DateFrom < project1.DateTo;
         }
 
-        public int GetDaysWorkedTogether(Employee employee1, Employee employee2)
+        public int GetDaysWorkedTogether(TimePeriodForProject project1, TimePeriodForProject project2)
         {
-            if (employee1.DateFrom > employee2.DateFrom)
+            if (project1.DateFrom > project2.DateFrom)
             {
-                return GetDaysWorkedTogether(employee2, employee1);
+                return GetDaysWorkedTogether(project2, project1);
             }
 
-            return employee1.DateTo > employee2.DateTo 
-                ? (employee2.DateTo - employee2.DateFrom).Days 
-                : (employee1.DateTo - employee2.DateFrom).Days;
+            return project1.DateTo > project2.DateTo 
+                ? (project2.DateTo - project2.DateFrom).Days 
+                : (project1.DateTo - project2.DateFrom).Days;
         }
     }
 }

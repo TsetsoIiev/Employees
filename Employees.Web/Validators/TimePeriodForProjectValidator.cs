@@ -4,11 +4,11 @@ using FluentValidation;
 
 namespace Employees.Web.Validators
 {
-    public class EmployeeValidator : AbstractValidator<Employee>
+    public class TimePeriodForProjectValidator : AbstractValidator<TimePeriodForProject>
     {
-        public EmployeeValidator()
+        public TimePeriodForProjectValidator()
         {
-            RuleFor(x => x.EmployeeId)
+            RuleFor(x => x.ProjectId)
                 .GreaterThan(0);
 
             RuleFor(x => x.DateFrom)

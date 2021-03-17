@@ -8,8 +8,8 @@ namespace Employees.Web.Interfaces
     {
         DateTime ParseDate(string date, DateType type);
 
-        bool AreOverlappingTimes(Employee employee1, Employee employee2);
+        bool AreOverlappingTimes(TimePeriodForProject project1, TimePeriodForProject project2);
 
-        int GetDaysWorkedTogether(Employee employee1, Employee employee2);
+        int GetDaysWorkedTogether(TimePeriodForProject project1, TimePeriodForProject project2);
     }
 }

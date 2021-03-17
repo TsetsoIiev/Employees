@@ -5,6 +5,6 @@ namespace Employees.Web.Interfaces
 {
     public interface IEmployeeService
     {
-        LongestCoworkers FindLongestCoworkers(Dictionary<int, List<Employee>> employees);
+        Coworkers FindLongestCoworkers(Dictionary<int, List<TimePeriodForProject>> employeesDictionary);
     }
 }

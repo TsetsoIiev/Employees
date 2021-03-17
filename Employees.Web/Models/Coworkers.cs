@@ -2,7 +2,7 @@
 
 namespace Employees.Web.Models
 {
-    public class LongestCoworkers
+    public class Coworkers
     {
         public int FirstEmployeeId { get; set; }
 

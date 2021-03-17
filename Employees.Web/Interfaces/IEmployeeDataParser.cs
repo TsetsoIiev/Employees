@@ -5,8 +5,6 @@ namespace Employees.Web.Interfaces
 {
     public interface IEmployeeDataParser
     {
-        Dictionary<int, List<Employee>> ParseEmployees(EmployeeCreate[] data);
-
-        LongestCoworkers GetLongestCoworkersForCompany(List<Employee> employees, int projectId);
+        Dictionary<int, List<TimePeriodForProject>> ParseData(IEnumerable<EmployeeCreate> data);
     }
 }

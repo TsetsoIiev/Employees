@@ -21,7 +21,7 @@ namespace Employees.Web.Controllers
         [Route("/GetLongestCoworkers")]
         public IActionResult GetLongestCoworkers([FromBody]EmployeeCreate[] data)
         {
-            var employees = _employeeDataParser.ParseEmployees(data);
+            var employees = _employeeDataParser.ParseData(data);
             var longestCoworkers = _employeeService.FindLongestCoworkers(employees);
 
             return longestCoworkers is not null
